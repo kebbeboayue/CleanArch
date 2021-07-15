@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Data.Context
 {
-    public class CleanArchDbContext:DbContext
+    public class CleanArchDbContext : DbContext
     {
         public CleanArchDbContext(DbContextOptions options) : base(options)
-        { 
-        
+        {
+
         }
 
         public DbSet<Course> Courses { get; set; }
