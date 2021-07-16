@@ -17,6 +17,12 @@ namespace CleanArch.Data.Repositories
             _contxt = cleanArchDbContext;
         }
 
+        public void Add(Course course)
+        {
+            _contxt.Courses.Add(course);
+            _contxt.SaveChanges();
+        }
+
         public IEnumerable<Course> GetCourses()
         {
             return _contxt.Courses;
